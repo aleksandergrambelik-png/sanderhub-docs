@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sander_0x04 - Native Security Tools</title>
+    <style>
+        :root {
+            --bg-color: #f8f9fa;
+            --text-color: #212529;
+            --primary-color: #0d6efd;
+            --card-bg: #ffffff;
+            --border-color: #dee2e6;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+        h1 { margin-bottom: 10px; color: #000; }
+        p.subtitle { color: #6c757d; font-size: 1.1em; margin-top: 0; }
+        h2 { color: #000; margin-top: 30px; font-size: 1.5em; }
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .project-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .project-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 0 0 10px 0;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .project-title:hover { text-decoration: underline; }
+        .project-desc { margin: 0 0 15px 0; color: #495057; }
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9em;
+        }
+        .btn:hover { background-color: #0b5ed7; }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Aleksander (Sander_0x04)</h1>
+        <p class="subtitle">Independent Security Researcher & Native Application Developer</p>
+    </header>
+
+    <h2>Featured Projects</h2>
+
+    <div class="project-card">
+        <a href="https://github.com/aleksandergrambelik-png/SanderGate" class="project-title">SanderGate</a>
+        <p class="project-desc">A native Android Git Userland designed for direct GitHub API integration. Features a zero-dependency architecture, local HTTP server firewall, and hardware-level authentication.</p>
+        <a href="https://github.com/aleksandergrambelik-png/SanderGate" class="btn">View Repository</a>
+    </div>
+
+    <div class="project-card">
+        <a href="https://github.com/aleksandergrambelik-png/SanderShield" class="project-title">SanderShield</a>
+        <p class="project-desc">A lightweight, standalone mobile security toolkit. Includes a 100-thread port scanner, 12-header vulnerability scanner, and anti-phishing modules optimized for mobile environments.</p>
+        <a href="https://github.com/aleksandergrambelik-png/SanderShield" class="btn">View Repository</a>
+    </div>
+
+    <div class="project-card">
+        <a href="https://github.com/aleksandergrambelik-png/SanderSuite" class="project-title">SanderSuite</a>
+        <p class="project-desc">An AI-powered Web Application Firewall (WAF) and Honeypot for Linux and Termux. Designed with advanced threat scoring and payload detection mechanisms.</p>
+        <a href="https://github.com/aleksandergrambelik-png/SanderSuite" class="btn">View Repository</a>
+    </div>
+
+    <div class="project-card">
+        <a href="https://github.com/aleksandergrambelik-png/SanderHexDump" class="project-title">SanderHexDump</a>
+        <p class="project-desc">A minimalist, native Android hex editor and reverse engineering tool. Built for speed and efficiency on mobile devices without root access.</p>
+        <a href="https://github.com/aleksandergrambelik-png/SanderHexDump" class="btn">View Repository</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Aleksander. Built with pure logic and zero dependencies.</p>
+    </footer>
+</div>
+
+</body>
+</html>
