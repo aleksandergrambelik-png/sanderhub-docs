@@ -11,9 +11,9 @@
     <style>
         /* The "Oldschool XML/Terminal" Vibe */
         body {
-            background-color: #0d1117; /* Dark mode base */
+            background-color: #0d1117;
             color: #c9d1d9;
-            font-family: 'Courier New', Courier, monospace; /* Font jadul */
+            font-family: 'Courier New', Courier, monospace;
             line-height: 1.5;
             margin: 0;
             padding: 40px 20px;
@@ -41,7 +41,7 @@
         .manifesto p { margin: 5px 0; font-size: 0.9em; }
         .manifesto .highlight { color: #2ea043; font-weight: bold; }
 
-        /* Project List (Oldschool List Style) */
+        /* Project List */
         h2.section-title {
             font-size: 1.1em;
             color: #ffffff;
@@ -88,31 +88,19 @@
             color: #ffffff;
         }
 
-        /* Support Section */
-        .support-box {
+        /* Support & Origin Boxes */
+        .support-box, .origin-box {
             border: 1px dashed #8b949e;
             padding: 20px;
             margin-top: 40px;
             text-align: center;
         }
-        .support-box p {
-            margin: 5px 0;
-            font-size: 0.9em;
-        }
-
-        /* Origin Section */
         .origin-box {
-            border-left: 2px solid #8b949e;
-            padding-left: 15px;
-            margin-top: 40px;
+            text-align: left;
             font-style: italic;
-            color: #8b949e;
             font-size: 0.85em;
         }
-        .origin-box .highlight-red {
-            color: #ff7b72;
-            font-weight: bold;
-        }
+        .origin-box .highlight-red { color: #ff7b72; font-weight: bold; }
 
         footer {
             margin-top: 50px;
@@ -141,6 +129,14 @@
     </div>
 
     <h2 class="section-title">-- FEATURED PROJECTS --</h2>
+
+    <!-- SanderNotePad-Suite -->
+    <div class="project-item">
+        <a href="https://github.com/aleksandergrambelik-png/SanderNotePad-Suite" class="project-title">SanderNotePad-Suite</a>
+        <div class="project-meta">[ Android APK | Utility | Zero-Dependency ]</div>
+        <p class="project-desc">Hardcore Note-Taking Application. Features a terminal-style UI, offline OSINT subdomain enumeration, and Wikipedia scraping capabilities. Because why use a colorful note app when a black terminal does the job?</p>
+        <a href="https://github.com/aleksandergrambelik-png/SanderNotePad-Suite" class="project-link">> VIEW_REPO</a>
+    </div>
 
     <!-- SanderDeflect -->
     <div class="project-item">
