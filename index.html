@@ -1,102 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- VERIFICATION TAGS -->
     <meta name="google-site-verification" content="nolSpH42F1O9csFgUdvgFG77352QiQ8sLr7TgoyL_gY" />
     <meta name="msvalidate.01" content="D8E7B31AA7E6FEF5B58760CBC1D9B202" />
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sander_0x04 | Cyberdeck Portfolio</title>
+    <title>Sander_0x04 | Arsenal</title>
     <style>
-        :root {
-            --bg-color: #0d1117;
-            --text-color: #c9d1d9;
-            --primary-color: #58a6ff;
-            --card-bg: #161b22;
-            --border-color: #30363d;
-            --btn-color: #238636;
-            --btn-hover: #2ea043;
-        }
+        /* The "Oldschool XML/Terminal" Vibe */
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
+            background-color: #0d1117; /* Dark mode base */
+            color: #c9d1d9;
+            font-family: 'Courier New', Courier, monospace; /* Font jadul */
+            line-height: 1.5;
             margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
             padding: 40px 20px;
         }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
         header {
-            text-align: center;
-            margin-bottom: 40px;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px dashed #8b949e;
             padding-bottom: 20px;
+            margin-bottom: 30px;
         }
-        h1 { margin-bottom: 10px; color: #ffffff; font-size: 2em; }
-        p.subtitle { color: #8b949e; font-size: 1.1em; margin-top: 0; }
-        h2 { color: #ffffff; margin-top: 30px; font-size: 1.5em; border-bottom: 1px solid var(--border-color); padding-bottom: 10px;}
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
+        h1 { margin: 0 0 5px 0; font-size: 1.5em; color: #ffffff; }
+        p.subtitle { margin: 0; color: #8b949e; font-size: 0.9em; }
+        
+        /* The Manifesto Box */
+        .manifesto {
+            border: 1px solid #30363d;
+            padding: 15px;
+            margin-bottom: 40px;
+            background-color: #161b22;
         }
-        .project-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            transition: transform 0.2s, border-color 0.2s;
+        .manifesto h2 { margin-top: 0; font-size: 1.1em; color: #58a6ff; }
+        .manifesto p { margin: 5px 0; font-size: 0.9em; }
+        .manifesto .highlight { color: #2ea043; font-weight: bold; }
+
+        /* Project List (Oldschool List Style) */
+        h2.section-title {
+            font-size: 1.1em;
+            color: #ffffff;
+            border-bottom: 1px dashed #30363d;
+            padding-bottom: 5px;
+            margin-top: 40px;
         }
-        .project-card:hover {
-            transform: translateY(-3px);
-            border-color: var(--primary-color);
+        .project-item {
+            margin-bottom: 25px;
+            padding-left: 15px;
+            border-left: 2px solid #30363d;
+        }
+        .project-item:hover {
+            border-left-color: #58a6ff;
         }
         .project-title {
-            font-size: 1.2em;
-            font-weight: 600;
-            color: var(--primary-color);
-            margin: 0 0 10px 0;
+            font-size: 1.0em;
+            font-weight: bold;
+            color: #58a6ff;
             text-decoration: none;
         }
-        .project-title:hover { text-decoration: underline; }
-        .project-desc { margin: 0 0 15px 0; color: #8b949e; font-size: 0.9em; flex-grow: 1;}
-        .tags { margin-bottom: 15px; }
-        .tag {
-            display: inline-block;
-            background: #21262d;
-            color: #c9d1d9;
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-size: 0.75em;
-            margin-right: 5px;
-            margin-bottom: 5px;
-            border: 1px solid var(--border-color);
+        .project-title:hover {
+            text-decoration: underline;
         }
-        .btn {
-            display: inline-block;
-            background-color: var(--btn-color);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.85em;
-            text-align: center;
-            border: 1px solid rgba(240,246,252,0.1);
-        }
-        .btn:hover { background-color: var(--btn-hover); }
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border-color);
+        .project-meta {
+            font-size: 0.8em;
             color: #8b949e;
-            font-size: 0.9em;
+            margin: 3px 0 8px 0;
+        }
+        .project-desc {
+            font-size: 0.85em;
+            margin: 0 0 10px 0;
+        }
+        .project-link {
+            font-size: 0.85em;
+            color: #2ea043;
+            text-decoration: none;
+            border: 1px solid #238636;
+            padding: 3px 8px;
+            background-color: #161b22;
+        }
+        .project-link:hover {
+            background-color: #238636;
+            color: #ffffff;
+        }
+        footer {
+            margin-top: 50px;
+            border-top: 1px dashed #30363d;
+            padding-top: 20px;
+            font-size: 0.8em;
+            color: #8b949e;
         }
     </style>
 </head>
@@ -104,159 +100,103 @@
 
 <div class="container">
     <header>
-        <h1>Aleksander (Sander_0x04)</h1>
-        <p class="subtitle">Independent Security Researcher | Ex-Undernet Practitioner | Zero-Dependency Developer</p>
+        <h1>Sander_0x04</h1>
+        <p class="subtitle">Independent Security Researcher | Zero-Dependency Developer</p>
     </header>
 
-    <h2>Featured Projects & Arsenal</h2>
+    <!-- THE MANIFESTO -->
+    <div class="manifesto">
+        <h2>[ SYSTEM NOTICE ]</h2>
+        <p>All tools and Android APKs listed below are strictly <span class="highlight">FREE</span> and provided "as is".</p>
+        <p>These are standalone builds. No domain required, no Termux required, no root required. Just pure logic.</p>
+        <p>If you are looking for a shiny dashboard to impress your boss, look elsewhere. This is an arsenal for practitioners, not a marketing product.</p>
+        <p>Runs Tarpit, Anti-Scanning, and a 12-Payload Vulnerability Test Engine (Offline cache & Online header checks). Use it wisely, or don't. I don't care.</p>
+    </div>
 
-    <div class="grid-container">
-        
-        <!-- 1. SanderDeflect -->
-        <div class="project-card">
-            <a href="https://github.com/aleksandergrambelik-png/SanderDeflect" class="project-title">🛡️ SanderDeflect</a>
-            <p class="project-desc">Standalone Android Defense Dashboard APK. Features Math Challenge Access Gate, Recon, Decoy HTML, Tarpit, Sinkhole JSON logging, and Payload Mirroring.</p>
-            <div class="tags">
-                <span class="tag">Android APK</span>
-                <span class="tag">Defense</span>
-                <span class="tag">Zero Dep</span>
-            </div>
-            <a href="https://github.com/aleksandergrambelik-png/SanderDeflect/releases" class="btn">Download APK</a>
-        </div>
+    <h2 class="section-title">-- FEATURED PROJECTS --</h2>
 
-        <!-- 2. SanderShield -->
-        <div class="project-card">
-            <a href="https://github.com/aleksandergrambelik-png/SanderShield" class="project-title">🔍 SanderShield</a>
-            <p class="project-desc">630KB Zero-Dependency Mobile Security Suite. Features Port Scanner, CVE Checker, 12-Header Vuln Scanner, Anti-Tracker, and GPS Guard.</p>
-            <div class="tags">
-                <span class="tag">Android APK</span>
-                <span class="tag">Scanner</span>
-                <span class="tag">Privacy</span>
-            </div>
-            <a href="https://github.com/aleksandergrambelik-png/SanderShield" class="btn">View Repository</a>
-        </div>
+    <!-- SanderDeflect -->
+    <div class="project-item">
+        <a href="https://github.com/aleksandergrambelik-png/SanderDeflect" class="project-title">SanderDeflect</a>
+        <div class="project-meta">[ Android APK | Defense | Zero-Dependency ]</div>
+        <p class="project-desc">Standalone Android Defense Dashboard. Features a Math Challenge access gate (good luck scripting that), Recon, Decoy HTML, Tarpit, Sinkhole JSON logging, and Payload Mirroring. Because why use a 50MB UI when 700KB does the job?</p>
+        <a href="https://github.com/aleksandergrambelik-png/SanderDeflect/releases" class="project-link">> DOWNLOAD_APK</a>
+    </div>
 
-        <!-- 3. SanderGate -->
-        <div class="project-card">
-            <a href="https://github.com/aleksandergrambelik-png/SanderGate-APK" class="project-title">🚪 SanderGate</a>
-            <p class="project-desc">Native Android Git Client & Local API Firewall. Manage repository allowlists, commit directly via GitHub API, and monitor local proxy activity.</p>
-            <div class="tags">
-                <span class="tag">Android APK</span>
-                <span class="tag">Git Client</span>
-                <span class="tag">API</span>
-            </div>
-            <a href="https://github.com/aleksandergrambelik-png/SanderGate-APK" class="btn">View Repository</a>
-        </div>
+    <!-- SanderShield -->
+    <div class="project-item">
+        <a href="https://github.com/aleksandergrambelik-png/SanderShield" class="project-title">SanderShield</a>
+        <div class="project-meta">[ Android APK | Scanner | Privacy ]</div>
+        <p class="project-desc">630KB Mobile Security Suite. Features Port Scanner, CVE Checker, 12-Header Vulnerability Scanner, Anti-Tracker, and GPS Guard. Yes, it's under 1MB. No, it won't drain your battery.</p>
+        <a href="https://github.com/aleksandergrambelik-png/SanderShield" class="project-link">> VIEW_REPO</a>
+    </div>
 
-        <!-- 4. SanderHexDump -->
-        <div class="project-card">
-            <a href="https://github.com/aleksandergrambelik-png/SanderHexDump" class="project-title">🧬 SanderHexDump</a>
-            <p class="project-desc">Native Android Hex Editor & Reverse Engineering Tool. Inspect magic bytes, analyze APKs, and perform quick digital forensics on the go.</p>
-            <div class="tags">
-                <span class="tag">Android APK</span>
-                <span class="tag">Forensics</span>
-                <span class="tag">Hex</span>
-            </div>
-            <a href="https://github.com/aleksandergrambelik-png/SanderHexDump" class="btn">View Repository</a>
-        </div>
+    <!-- SanderGate -->
+    <div class="project-item">
+        <a href="https://github.com/aleksandergrambelik-png/SanderGate-APK" class="project-title">SanderGate</a>
+        <div class="project-meta">[ Android APK | Git Client | API ]</div>
+        <p class="project-desc">Native Android Git Client and Local API Firewall. Manage repository allowlists, commit directly via GitHub API, and monitor local proxy activity. Built for developers who are too lazy to open a laptop.</p>
+        <a href="https://github.com/aleksandergrambelik-png/SanderGate-APK" class="project-link">> VIEW_REPO</a>
+    </div>
 
-        <!-- 5. SanderTrap -->
-        <div class="project-card">
-            <a href="https://github.com/aleksandergrambelik-png/SanderTrap" class="project-title">🕸️ SanderTrap</a>
-            <p class="project-desc">Advanced Honeypot with ReDoS protection, Tarpit, and JSONL logging. Detects SQLi, XSS, and Command Injection in real-time.</p>
-            <div class="tags">
-                <span class="tag">Java Tool</span>
-                <span class="tag">Honeypot</span>
-                <span class="tag">Network</span>
-            </div>
-            <a href="https://github.com/aleksandergrambelik-png/SanderTrap" class="btn">View Repository</a>
-        </div>
+    <!-- SanderHexDump -->
+    <div class="project-item">
+        <a href="https://github.com/aleksandergrambelik-png/SanderHexDump" class="project-title">SanderHexDump</a>
+        <div class="project-meta">[ Android APK | Forensics | Hex ]</div>
+        <p class="project-desc">Native Android Hex Editor and Reverse Engineering Tool. Inspect magic bytes, analyze APKs, and perform quick digital forensics on the go. Because real analysts read hex, not pretty UI colors.</p>
+        <a href="https://github.com/aleksandergrambelik-png/SanderHexDump" class="project-link">> VIEW_REPO</a>
+    </div>
 
-        <!-- 6. StealthDefense -->
-        <div class="project-card">
-            <a href="https://github.com/aleksandergrambelik-png/StealthDefense" class="project-title">🥷 StealthDefense</a>
-            <p class="project-desc">Minimalist Honeypot & Tarpit defense for Termux/PC. Built-in Clickjacking Protection and Barcode Guard (SQLi/XSS/LFI).</p>
-            <div class="tags">
-                <span class="tag">Java Tool</span>
-                <span class="tag">Defense</span>
-                <span class="tag">Tarpit</span>
-            </div>
-            <a href="https://github.com/aleksandergrambelik-png/StealthDefense" class="btn">View Repository</a>
-        </div>
+    <!-- SanderTrap -->
+    <div class="project-item">
+        <a href="https://github.com/aleksandergrambelik-png/SanderTrap" class="project-title">SanderTrap</a>
+        <div class="project-meta">[ Java Tool | Honeypot | Network ]</div>
+        <p class="project-desc">Advanced Honeypot with ReDoS protection, Tarpit, and JSONL logging. Detects SQLi, XSS, and Command Injection in real-time. Feed the attackers to the tarpit and watch them cry.</p>
+        <a href="https://github.com/aleksandergrambelik-png/SanderTrap" class="project-link">> VIEW_REPO</a>
+    </div>
 
-        <!-- 7. SanderMultiVector -->
-        <div class="project-card">
-            <a href="https://github.com/aleksandergrambelik-png/SanderMultiVector" class="project-title">🎯 SanderMultiVector</a>
-            <p class="project-desc">Hybrid Multi-Vector Bug Bounty Arsenal. Tests for SQLi, XSS, RCE, LFI, and API Injection. Built for mobile bug hunting.</p>
-            <div class="tags">
-                <span class="tag">Java Tool</span>
-                <span class="tag">Offensive</span>
-                <span class="tag">Bug Bounty</span>
-            </div>
-            <a href="https://github.com/aleksandergrambelik-png/SanderMultiVector" class="btn">View Repository</a>
-        </div>
+    <!-- StealthDefense -->
+    <div class="project-item">
+        <a href="https://github.com/aleksandergrambelik-png/StealthDefense" class="project-title">StealthDefense</a>
+        <div class="project-meta">[ Java Tool | Defense | Tarpit ]</div>
+        <p class="project-desc">Minimalist Honeypot and Tarpit defense for Termux/PC. Built-in Clickjacking Protection and Barcode Guard (SQLi/XSS/LFI). Zero dependencies. Because your bloatware firewall is probably leaking data anyway.</p>
+        <a href="https://github.com/aleksandergrambelik-png/StealthDefense" class="project-link">> VIEW_REPO</a>
+    </div>
 
-        <!-- 8. SanderScan -->
-        <div class="project-card">
-            <a href="https://github.com/aleksandergrambelik-png/SanderScan" class="project-title">📡 SanderScan</a>
-            <p class="project-desc">Lightweight LAN & Port Scanner for PC and Termux. Features 250-thread scanning, Banner Grabbing, and MAC Vendor Lookup.</p>
-            <div class="tags">
-                <span class="tag">Java Tool</span>
-                <span class="tag">Scanner</span>
-                <span class="tag">Termux</span>
-            </div>
-            <a href="https://github.com/aleksandergrambelik-png/SanderScan" class="btn">View Repository</a>
-        </div>
+    <!-- SanderMultiVector -->
+    <div class="project-item">
+        <a href="https://github.com/aleksandergrambelik-png/SanderMultiVector" class="project-title">SanderMultiVector</a>
+        <div class="project-meta">[ Java Tool | Offensive | Bug Bounty ]</div>
+        <p class="project-desc">Hybrid Multi-Vector Bug Bounty Arsenal. Tests for SQLi, XSS, RCE, LFI, and API Injection. Built for mobile bug hunting. No, you don't need a 32GB RAM laptop to test a payload.</p>
+        <a href="https://github.com/aleksandergrambelik-png/SanderMultiVector" class="project-link">> VIEW_REPO</a>
+    </div>
 
-        <!-- 9. SanderSuite-Linux -->
-        <div class="project-card">
-            <a href="https://github.com/aleksandergrambelik-png/SanderSuite-Linux" class="project-title">🐧 SanderSuite-Linux</a>
-            <p class="project-desc">All-in-one offensive and defensive security suite for Linux. Combines Recon and Honeypot capabilities into a single framework.</p>
-            <div class="tags">
-                <span class="tag">Linux</span>
-                <span class="tag">Suite</span>
-                <span class="tag">Security</span>
-            </div>
-            <a href="https://github.com/aleksandergrambelik-png/SanderSuite-Linux" class="btn">View Repository</a>
-        </div>
+    <!-- SanderScan -->
+    <div class="project-item">
+        <a href="https://github.com/aleksandergrambelik-png/SanderScan" class="project-title">SanderScan</a>
+        <div class="project-meta">[ Java Tool | Scanner | Termux ]</div>
+        <p class="project-desc">Lightweight LAN and Port Scanner for PC and Termux. Features 250-thread scanning, Banner Grabbing, and MAC Vendor Lookup. Your CPU might warm up. That is intentional.</p>
+        <a href="https://github.com/aleksandergrambelik-png/SanderScan" class="project-link">> VIEW_REPO</a>
+    </div>
 
-        <!-- 10. Awesome Indonesia Repo -->
-        <div class="project-card">
-            <a href="https://github.com/aleksandergrambelik-png/awesome-indonesia-repo" class="project-title">🇮🇩 Awesome Indonesia</a>
-            <p class="project-desc">A curated list of amazingly awesome repositories created and contributed by Indonesian people. (Forked & Contributed).</p>
-            <div class="tags">
-                <span class="tag">Contribution</span>
-                <span class="tag">Open Source</span>
-            </div>
-            <a href="https://github.com/aleksandergrambelik-png/awesome-indonesia-repo" class="btn">View Repository</a>
-        </div>
+    <!-- SanderSuite-Linux -->
+    <div class="project-item">
+        <a href="https://github.com/aleksandergrambelik-png/SanderSuite-Linux" class="project-title">SanderSuite-Linux</a>
+        <div class="project-meta">[ Linux | Suite | Security ]</div>
+        <p class="project-desc">All-in-one offensive and defensive security suite for Linux. Combines Recon and Honeypot capabilities into a single framework. Pure logic, no garbage libraries.</p>
+        <a href="https://github.com/aleksandergrambelik-png/SanderSuite-Linux" class="project-link">> VIEW_REPO</a>
+    </div>
 
-        <!-- 11. SanderHub Docs -->
-        <div class="project-card">
-            <a href="https://github.com/aleksandergrambelik-png/sanderhub-docs" class="project-title">📚 SanderHub Docs</a>
-            <p class="project-desc">The central hub and documentation for the Sander ecosystem. Built on a phone, smaller than your node_modules.</p>
-            <div class="tags">
-                <span class="tag">HTML</span>
-                <span class="tag">Documentation</span>
-            </div>
-            <a href="https://github.com/aleksandergrambelik-png/sanderhub-docs" class="btn">View Repository</a>
-        </div>
-
-        <!-- 12. Profile Repo -->
-        <div class="project-card">
-            <a href="https://github.com/aleksandergrambelik-png/aleksandergrambelik-png" class="project-title">👤 GitHub Profile</a>
-            <p class="project-desc">The main profile README. Contains the philosophy, the "newspaper" timestamps, and the chaos of daily experiments.</p>
-            <div class="tags">
-                <span class="tag">Markdown</span>
-                <span class="tag">Profile</span>
-            </div>
-            <a href="https://github.com/aleksandergrambelik-png/aleksandergrambelik-png" class="btn">View Repository</a>
-        </div>
-
+    <!-- Awesome Indonesia -->
+    <div class="project-item">
+        <a href="https://github.com/aleksandergrambelik-png/awesome-indonesia-repo" class="project-title">Awesome Indonesia</a>
+        <div class="project-meta">[ Contribution | Open Source ]</div>
+        <p class="project-desc">A curated list of amazingly awesome repositories created and contributed by Indonesian people. Yes, I contributed. No, I don't need a badge for it.</p>
+        <a href="https://github.com/aleksandergrambelik-png/awesome-indonesia-repo" class="project-link">> VIEW_REPO</a>
     </div>
 
     <footer>
-        <p>&copy; 2026 Aleksander. Built on a phone. Zero Dependencies. Let the code speak. 🌓</p>
+        <p>Copyright (c) 2026 Aleksander. No rights reserved. Just don't be a skid.</p>
     </footer>
 </div>
 
